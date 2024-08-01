@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mainPage.views import render_personal_profile, render_bussiness_profile, about_me
 
 urlpatterns = [
-    path(),
-
+    path("personalProfile/", render_personal_profile, name="personalProfile"),
+    path("bussinessProfile/", render_bussiness_profile, name="bussinessProfile"),
+    path("aboutMe/", about_me, name="aboutMe"),
 ]
