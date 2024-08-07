@@ -29,3 +29,10 @@ def about_me(request):
     Page with information about me.
     """
     return render(request, 'aboutMe.html')
+
+def render_resume(request):
+    """
+    This function will return the resume page of the website.
+    Page with my resume.
+    """
+    return render(request, 'resume.html')

@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainPage.views import (render_personal_profile, render_home_page,
-                            render_bussiness_profile, about_me)
+                            render_bussiness_profile, about_me, render_resume)
 
 urlpatterns = [
     path("", render_home_page, name="home"),
     path("personalProfile/", render_personal_profile, name="personalProfile"),
     path("bussinessProfile/", render_bussiness_profile, name="bussinessProfile"),
     path("aboutMe/", about_me, name="aboutMe"),
+    path("resume/", render_resume, name="resume"),
 ]
