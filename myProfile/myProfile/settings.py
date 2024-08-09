@@ -136,3 +136,10 @@ STATICFILES_DIRS = [
 
 # STATIC_ROOT = "/var/www/PumelelaAppsProfile/static/"
 # # run $ python manage.py collectstatic to send files to static folder
+
+# Media files
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
