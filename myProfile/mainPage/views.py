@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from models import Projects
 
 # Create your views here.
 
@@ -36,3 +37,19 @@ def render_resume(request):
     Page with my resume.
     """
     return render(request, 'resume.html')
+
+def render_projects(request):
+    """
+    This function will return the projects page of the website.
+    Page with my projects.
+    """
+    projects = Projects()
+    return render(request, 'projects.html', {"projects": projects})
+
+def render_single_project(request, pk):
+    """
+    renders project alone  with details.
+    """
+    project = get_object_or_404(Projects, pk=pk)
+    render(request, "project.html", {"project": project})
+

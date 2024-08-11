@@ -17,7 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainPage.views import (render_personal_profile, render_home_page,
-                            render_bussiness_profile, about_me, render_resume)
+                            render_bussiness_profile, about_me, render_resume,
+                            render_projects, render_single_project)
 
 urlpatterns = [
     path("", render_home_page, name="home"),
@@ -25,4 +26,6 @@ urlpatterns = [
     path("bussinessProfile/", render_bussiness_profile, name="bussinessProfile"),
     path("aboutMe/", about_me, name="aboutMe"),
     path("resume/", render_resume, name="resume"),
+    path('projects/', render_projects, name='projects'),
+    path('projects/<int:pk>', render_single_project, name="project"),
 ]
