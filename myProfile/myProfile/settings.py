@@ -126,11 +126,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Deployment file location
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    os.path.join(BASE_DIR, 'MyProfile/static'),
-#"/var/www/PumelelaAppsProfile/static/",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     os.path.join(BASE_DIR, 'MyProfile/static'),
+    
+# "/var/www/PumelelaAppsProfile/static/",
+# ]
 
 # # File collecction to static
 

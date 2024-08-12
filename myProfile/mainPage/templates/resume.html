@@ -16,7 +16,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#">Resume</a>
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
                 <a class="nav-link" href="#">Api's</a>
                 <a class="nav-link" href="#">Certificates</a>
                 <a class="nav-link" href="#">Open Source Contributions</a>
@@ -63,7 +63,7 @@
         <section class="experience">
             <h2>Experience</h2>
             <h3>Self-Employed Developer (Freelance)</h3>
-            <a href="#">
+            <a href="{% url 'project' pk=1 %}">
             <h4>Quick Launch (Windows and Linux Shortcut App)</h4>
             </a>
             <ul>
@@ -71,7 +71,7 @@
                 <li>Utilized Tkinter and Python to create a user-friendly graphical interface (GUI).</li>
                 <li>Streamlined daily workflows by providing efficient shortcuts.</li>
             </ul>
-            <a href="#">
+            <a href="{% url 'project' pk=2 %}">
             <h4>Lottery API (Real-Time Lottery Numbers in Django and FastAPI)</h4>
             </a>
             <ul>
@@ -83,7 +83,7 @@
                     Selenium
                     for automated data collection from various lottery sources.</li>
             </ul>
-            <a href="#">
+            <a href="{% url 'project' pk=3 %}">
             <h4>Crop Crop (WhatsApp Video Editing Tool)</h4>
             </a>
             <ul>
@@ -92,12 +92,9 @@
                     Tkinter</li>
                 <li>Leveraged
                     pyMovies
-                    for core functionality, allowing users to share movies within WhatsApp’s100MB file size limit.</li>
-                <li>Leveraged
-                    pyMovies
-                    for core functionality, allowing users to share movies within WhatsApp’s100MB file size limit.</li>
+                    for core functionality, allowing users to share movies within WhatsApp's 100MB file size limit.</li>
             </ul>
-            <a href="#">
+            <a href="{% url 'project' pk=4 %}">
             <h4>Lotto Buster (Educational Website)</h4>
             </a>
             <ul>
@@ -120,7 +117,7 @@
                     SQL databases
                     for efficient data storage and retrieval.</li>
             </ul>
-            <a href="#">
+            <a href="{% url 'project' pk=5 %}">
             <h4>ALXprirence (Collaborative Platform for ALX Students)</h4>
             </a>
             <ul>
@@ -141,7 +138,6 @@
                 </li>
                 <li>Streamlined daily workflows by providing efficient shortcuts.</li>
             </ul>
-            
         </section>
         <section class="education">
             <h2>Education</h2>
@@ -157,3 +153,4 @@
     <script type="text/css" href="{% static 'mainPage/javascript/script.js' %}"></script>
 </body>
 </html>
+ 
