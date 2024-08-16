@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">PumelelaApps</a>
+          <a class="navbar-brand" href={% url 'home' %}>PumelelaApps</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Api's</a>
                 <a class="nav-link" href="#">Certificates</a>
                 <a class="nav-link" href="#">Open Source Contributions</a>
-                <a class="nav-link" href="#">Business Website</a>
+                <a class="nav-link" href="{% url 'bussinessProfile' %}">Business Website</a>
             </div>
           </div>
         </div>

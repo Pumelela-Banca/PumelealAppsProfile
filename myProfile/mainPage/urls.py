@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from mainPage.views import (render_personal_profile, render_home_page,
                             render_bussiness_profile, about_me, render_resume,
-                            render_projects, render_single_project)
+                            render_projects, render_single_project,
+                            render_services, render_service_and_form)
 
 urlpatterns = [
     path("", render_home_page, name="home"),
@@ -28,4 +29,6 @@ urlpatterns = [
     path("resume/", render_resume, name="resume"),
     path('projects/', render_projects, name='projects'),
     path('projects/<int:pk>', render_single_project, name="project"),
+    path('services', render_services, name="services"),
+    path('services/<int:pk>', render_service_and_form, name="service"),
 ]

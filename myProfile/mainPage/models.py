@@ -23,6 +23,9 @@ class Services(models.Model):
     """
     
     SERVICE_CATEGORIES = [
+        ('Front-end', 'Web Service'),
+        ('Mobile', 'Build Applications'),
+        ('Web Scrapping', 'Data Collection'),
         ('Compute', 'Compute Services'),
         ('Database', 'Database Services'),
         ('Networking', 'Networking Services'),
