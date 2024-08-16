@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from ..models import Projects, Services
-
+from django.shortcuts import render
+from ..models import Services
+from django.views.generic.list import ListView, CreateView
 
 
 def render_bussiness_profile(request):
@@ -16,7 +16,21 @@ def render_services(request):
     Renders the services that I offer
     """
     services = Services.objects.all()
-    return render(request, "", {"servives": services})
+    return render(request, "services.html", {"servives": services})
+
+
+class ServicesListView(ListView):
+    """
+    Renders services page
+    """
+    template_name = "services.html"
+    model = Services
+
+    def get_queryset(self):
+        queryset = Services.objects.all().order_by("title")
+        return queryset
+    
+
 
 def render_service_and_form(request, pk):
     """

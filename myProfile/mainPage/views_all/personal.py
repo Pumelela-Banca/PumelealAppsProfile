@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from ..models import Projects, Services
-
+from ..models import Projects
 
 
 def render_personal_profile(request):
