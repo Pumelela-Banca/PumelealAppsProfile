@@ -27,10 +27,9 @@ class ServicesListView(ListView):
     model = Services
 
     def get_queryset(self):
-        queryset = Services.objects.all().order_by("title")
+        queryset = Services.objects.all().order_by("name")
         return queryset
     
-
 
 def render_service_and_form(request, pk):
     """

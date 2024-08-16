@@ -38,6 +38,7 @@ class Services(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     category = models.CharField(max_length=50, choices=SERVICE_CATEGORIES)
+    image = models.ImageField()
 
     def __str__(self):
         return self.name
