@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from ..models import Services
-from django.views.generic.list import ListView, CreateView
+from django.views.generic.list import ListView
+from django.views.generic import DetailView
 
 
 def render_bussiness_profile(request):
@@ -25,14 +26,18 @@ class ServicesListView(ListView):
     """
     template_name = "services.html"
     model = Services
+    paginate_by = 5
 
     def get_queryset(self):
         queryset = Services.objects.all().order_by("name")
         return queryset
-    
 
-def render_service_and_form(request, pk):
+
+class ServiceDetailView(DetailView):
     """
-    renders service's page and form to ask questions and apply
+    Renders services Details
     """
-    pass
+    model = Services
+    template_name = "service.html"
+
+

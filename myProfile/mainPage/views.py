@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Projects, Services
-from views_all import *
+from .views_all import *
 
 # Create your views here.
 

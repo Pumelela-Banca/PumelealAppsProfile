@@ -19,7 +19,7 @@ from django.urls import path
 from mainPage.views import (render_personal_profile, render_home_page,
                             render_bussiness_profile, about_me, render_resume,
                             render_projects, render_single_project,
-                            render_services, render_service_and_form,
+                            render_services,
                             ServicesListView)
 
 
@@ -33,5 +33,5 @@ urlpatterns = [
     path('projects/<int:pk>', render_single_project, name="project"),
     path('services', render_services, name="services"),
     #path('services', ServicesListView.as_view(), name="services"),
-    path('services/<int:pk>', render_service_and_form, name="service"),
+    #path('services/<int:pk>', render_service_and_form, name="service"),
 ]

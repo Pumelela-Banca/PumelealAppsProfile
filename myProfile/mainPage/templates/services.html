@@ -1,0 +1,18 @@
+{% extends "baseBussiness.html" %}
+{% block title %}
+    <title>Services</title>
+{% endblock title %}
+{% block content %}
+{% for service in services %}
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ service.name }}</h5>
+                <p class="card-text">{{ service.description }}</p>
+                <a href="{% url 'service' pk=service.pk %}" class="btn btn-primary">Interested?</a>
+              </div>
+            </div>
+        </div>
+{% endfor %}
+{% endblock content %}

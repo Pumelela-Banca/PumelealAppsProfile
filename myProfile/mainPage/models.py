@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -38,7 +39,7 @@ class Services(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     category = models.CharField(max_length=50, choices=SERVICE_CATEGORIES)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='mainPage/images/', null=True, blank=True)
 
     def __str__(self):
         return self.name
