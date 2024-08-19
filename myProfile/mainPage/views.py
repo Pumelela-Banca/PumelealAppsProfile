@@ -9,7 +9,7 @@ def render_home_page(request):
     This function will return the home page of the website.
     Page with the main information.
     """
-    services = Services()
+    services = Services.objects.all()
     return render(request, 'mainPage.html', {"services": services})
 
 def about_me(request):

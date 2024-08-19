@@ -17,7 +17,7 @@ def render_services(request):
     Renders the services that I offer
     """
     services = Services.objects.all()
-    return render(request, "services.html", {"servives": services})
+    return render(request, "services.html", {"services": services})
 
 
 class ServicesListView(ListView):

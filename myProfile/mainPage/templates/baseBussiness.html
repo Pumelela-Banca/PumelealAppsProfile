@@ -8,20 +8,18 @@
     <link rel="stylesheet" type="text/css" href="{% static 'mainPage/css/styles.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">PumelelaApps</a>
+          <a class="navbar-brand" href="{% url 'home' %}">PumelelaApps</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url 'resume' %}">Resume</a>
                 <a class="nav-link" href="{% url 'projects' %}">Projects</a>
-                <a class="nav-link" href="#">Api's</a>
-                <a class="nav-link" href="#">Certificates</a>
-                <a class="nav-link" href="#">Open Source Contributions</a>
-                <a class="nav-link" href="{% url 'bussinessProfile' %}">Business Website</a>
+                <a class="nav-link" href="{% url "services" %}">Products and Services</a>
+                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{% url 'personalProfile' %}">Personal Website</a>
             </div>
           </div>
         </div>

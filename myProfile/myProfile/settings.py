@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ies$mob8obbt_cb2+xj4jfiv-0+s!%hmmo@pc)fj05oxrv&qot
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,12 +126,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Deployment file location
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
 #     os.path.join(BASE_DIR, 'MyProfile/static'),
     
 # "/var/www/PumelelaAppsProfile/static/",
-# ]
+]
 
 # # File collecction to static
 

@@ -1,8 +1,15 @@
 {% extends "basePersonal.html" %}
+{% load static %}
 {% block title %}
     <title>Resume</title>
 {% endblock title %}
-{% block conent %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mainPage/css/styles.css' %}">
+{% endblock css %}
+
+
+{% block content %}
 <h1 class="names">Resume</h1>
 <div class="container">
     <header>
@@ -125,5 +132,5 @@
     </section>
 </div>
 
-{% endblock conent %}
+{% endblock %}
  
