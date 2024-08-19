@@ -3,7 +3,12 @@
     <title>Services</title>
 {% endblock title %}
 {% block content %}
-{% for service in services %}
+
+<div class="container">
+  <h1>Our Products and Services</h1>
+  <div class="row">
+  {% for service in services %}
+      
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
               <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
@@ -14,5 +19,7 @@
               </div>
             </div>
         </div>
-{% endfor %}
+  {% endfor %}
+  </div>
+</div>
 {% endblock content %}

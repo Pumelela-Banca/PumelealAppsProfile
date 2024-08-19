@@ -12,6 +12,7 @@ class Projects(models.Model):
     description = models.TextField()
     technology = models.CharField(max_length=50)
     url = models.URLField()
+    url_video = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
