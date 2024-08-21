@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ies$mob8obbt_cb2+xj4jfiv-0+s!%hmmo@pc)fj05oxrv&qot
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pumelelaapps.co.za', 'www.pumelelaapps.co.za']
 
 
 # Application definition
@@ -130,7 +130,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 #     os.path.join(BASE_DIR, 'MyProfile/static'),
     
-# "/var/www/PumelelaAppsProfile/static/",
+# "/var/www/myProfile/static/",
 ]
 
 # # File collecction to static
