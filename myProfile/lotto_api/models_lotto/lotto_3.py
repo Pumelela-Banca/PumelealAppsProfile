@@ -4,7 +4,7 @@ from .lotto_1 import LottoP1
 # Create your models here.
 
 
-class LottoP12(models.Model, LottoP1):
+class LottoP3(models.Model, LottoP1):
     """
     This model will store the information about the Lotto Plus 2 game.
     """

@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['pumelelaapps.co.za', 'www.pumelelaapps.co.za']
 INSTALLED_APPS = [
     'mainPage',
     'lotto_api',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
