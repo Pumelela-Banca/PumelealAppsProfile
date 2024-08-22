@@ -1,6 +1,7 @@
 """
 Views for the lotto_api app.
 """
+from django.shortcuts import render
 from datetime import datetime
 from rest_framework import generics
 from .models import *
@@ -9,6 +10,14 @@ from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
+
+# about API
+
+def render_about_api(request):
+    """
+    Api usage information.
+    """
+    return render(request, 'about_api.html')
 
 
 class Lotto1Lister(generics.ListCreateAPIView):
