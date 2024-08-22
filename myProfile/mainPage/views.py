@@ -19,3 +19,11 @@ def about_me(request):
     """
     return render(request, 'aboutMe.html')
 
+
+def render_404(request, exception):
+    """
+    This function will return the 404 page of the website.
+    Page with the 404 error.
+    """
+    return render(request, '404.html', status=404)
+

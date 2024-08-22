@@ -20,9 +20,11 @@ from mainPage.views import (render_personal_profile, render_home_page,
                             render_bussiness_profile, about_me, render_resume,
                             render_projects, render_single_project,
                             render_services, ServiceDetailView,
-                            ServicesListView)
+                            ServicesListView, render_404)
+from django.conf.urls import handler404
 
 
+handler404 = render_404
 urlpatterns = [
     path("", render_home_page, name="home"),
     path("personalProfile/", render_personal_profile, name="personalProfile"),
