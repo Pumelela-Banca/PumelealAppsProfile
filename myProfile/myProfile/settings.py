@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ies$mob8obbt_cb2+xj4jfiv-0+s!%hmmo@pc)fj05oxrv&qot
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pumelelaapps.co.za', 'www.pumelelaapps.co.za']
+ALLOWED_HOSTS = ['pumelelaapps.co.za', 'www.pumelelaapps.co.za', '127.0.0.1', 'localhost']
 
 
 # Application definition

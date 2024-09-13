@@ -20,20 +20,20 @@ def render_about_api(request):
     return render(request, 'about_api.html')
 
 
-class Lotto1Lister(generics.ListCreateAPIView):
-    """
-    This class will return all the lotto numbers.
-    """
-    queryset = LottoP1.objects.all()
-    serializer_class = LottoSerializer
-
-
 class Lotto2Lister(generics.ListCreateAPIView):
     """
     This class will return all the lotto 3 numbers.
     """
     queryset = LottoP2.objects.all()
     serializer_class = LottoSerializer2
+
+
+class Lotto1Lister(generics.ListCreateAPIView):
+    """
+    This class will return all the lotto numbers.
+    """
+    queryset = LottoP1.objects.all()
+    serializer_class = LottoSerializer
 
 
 class Lotto3Lister(generics.ListCreateAPIView):
@@ -69,52 +69,83 @@ class DailyLottoLister(generics.ListCreateAPIView):
 
 # Get latest lotto number
 
-class Lotto1Detail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    This class will return a single lotto number.
-    """
-    queryset = LottoP1.objects.all().last()
-    serializer_class = LottoSerializer
-
-
 class Lotto2Detail(generics.RetrieveUpdateDestroyAPIView):
     """
     This class will return a single lotto number.
     """
-    queryset = LottoP2.objects.all().last()
     serializer_class = LottoSerializer2
+
+    def get_queryset(self):
+        queryset = LottoP2.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return LottoP2.objects.none()
+
+
+class Lotto1Detail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    This class will return a single lotto number.
+    """
+    serializer_class = LottoSerializer
+
+    def get_queryset(self):
+        queryset = LottoP1.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return LottoP1.objects.none()
 
 
 class Lotto3Detail(generics.RetrieveUpdateDestroyAPIView):
     """
     This class will return a single lotto number.
     """
-    queryset = LottoP3.objects.all().last()
     serializer_class = LottoSerializer3
+
+    def get_queryset(self):
+        queryset = LottoP3.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return LottoP3.objects.none()
 
 
 class PowerBallDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     This class will return a single powerball number.
     """
-    queryset = PowerBall.objects.all().last()
+    
     serializer_class = PowerBallSerializer
 
+    def get_queryset(self):
+        queryset = PowerBall.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return PowerBall.objects.none()
+    
 
 class PowerBallPlusDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     This class will return a single powerball plus number.
     """
-    queryset = PowerBallP1.objects.all().last()
     serializer_class = PowerBallPlusSerializer
+
+    def get_queryset(self):
+        queryset = PowerBallP1.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return PowerBallP1.objects.none()
 
 
 class DailyLottoDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     This class will return a single daily lotto number.
     """
-    queryset = Daily.objects.all().last()
     serializer_class = DailyLottoSerializer
+
+    def get_queryset(self):
+        queryset = Daily.objects.all()
+        if queryset.exists():
+            return queryset.last()
+        return Daily.objects.none()
 
 
 # Get numbers for specific date

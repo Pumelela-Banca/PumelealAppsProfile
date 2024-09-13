@@ -27,6 +27,6 @@ class Daily(models.Model):
     div_prise_4 = models.FloatField()
 
     def __str__(self):
-        return f"Daily Lotto - 
-        {self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-
-        {self.number_4}-{self.number_5}"
+        return (f"Daily Lotto - " 
+                f"{self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-" 
+                f"{self.number_4}-{self.number_5}")

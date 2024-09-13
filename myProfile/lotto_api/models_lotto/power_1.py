@@ -7,7 +7,7 @@ class PowerBall(models.Model):
     """
     This model will store the power ball numbers.
     """
-    date = models.DateField()
+    draw_date = models.DateField()
     number_1 = models.IntegerField()
     number_2 = models.IntegerField()
     number_3 = models.IntegerField()
@@ -39,6 +39,6 @@ class PowerBall(models.Model):
     div_prise_9 = models.FloatField()
 
     def __str__(self):
-        return f"Power Ball - 
-        {self.date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-
-        {self.number_5}--{self.bonus_number}"
+        return (f"Power Ball - "
+                f"{self.date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-"
+                f"{self.number_5}--{self.bonus_number}")

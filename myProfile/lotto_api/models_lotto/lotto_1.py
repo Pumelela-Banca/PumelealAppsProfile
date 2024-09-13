@@ -39,7 +39,7 @@ class LottoP1(models.Model):
 
 
     def __str__(self):
-        return f"Lotto - 
-        {self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-
-        {self.number_5}-{self.number_6}--{self.bonus_number}"
+        return (f"Lotto - "
+                f"{self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-"
+                f"{self.number_5}-{self.number_6}--{self.bonus_number}")
     
