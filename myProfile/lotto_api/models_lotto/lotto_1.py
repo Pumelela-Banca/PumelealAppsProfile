@@ -37,7 +37,6 @@ class LottoP1(models.Model):
     div_prise_7 = models.FloatField()
     div_prise_8 = models.FloatField()
 
-
     def __str__(self):
         return (f"Lotto - "
                 f"{self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-"

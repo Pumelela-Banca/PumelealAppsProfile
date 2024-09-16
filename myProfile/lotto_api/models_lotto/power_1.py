@@ -40,5 +40,5 @@ class PowerBall(models.Model):
 
     def __str__(self):
         return (f"Power Ball - "
-                f"{self.date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-"
+                f"{self.draw_date}-{self.number_1}-{self.number_2}-{self.number_3}-{self.number_4}-"
                 f"{self.number_5}--{self.bonus_number}")
