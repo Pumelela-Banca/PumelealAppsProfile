@@ -7,7 +7,7 @@ class LottoP2(models.Model):
     """
     This model will store the information about the Lotto Plus 1 game.
     """
-    draw_date = models.DateField()
+    draw_date = models.CharField(max_length=50)
     number_1 = models.IntegerField()
     number_2 = models.IntegerField()
     number_3 = models.IntegerField()
