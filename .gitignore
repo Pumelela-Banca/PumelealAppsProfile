@@ -164,3 +164,7 @@ cython_debug/
 # my files
 myInfo.txt
 
+
+# settings file
+
+myProfile/myProfile/settings.py
