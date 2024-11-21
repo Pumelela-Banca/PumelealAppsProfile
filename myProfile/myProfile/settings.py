@@ -22,6 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-ies$mob8obbt_cb2+xj4jfiv-0+s!%hmmo@pc)fj05oxrv&qot'
+TEMPLATES_DIR_MyProfile = os.path.join(BASE_DIR, 'mainPage/templates')
+TEMPLATES_DIR_APi = os.path.join(BASE_DIR, 'lotto_api/templates')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'myProfile.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR_MyProfile, TEMPLATES_DIR_APi],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
