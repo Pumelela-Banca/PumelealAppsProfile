@@ -168,3 +168,8 @@ myInfo.txt
 # settings file
 
 myProfile/myProfile/settings.py
+
+
+# ssh keys
+sephshNew
+sephshNew.pub
