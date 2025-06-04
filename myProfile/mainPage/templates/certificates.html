@@ -1,9 +1,28 @@
 {% extends "baseBussiness.html" %}
+{% load static %}
 {% block title %}
     <title>Certifications</title>
 {% endblock title %}
 {% block content %}
 
+
+<div class="container text-center">
+    <h2>My Certifications</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'mainPage/images/17-short-specializations-certificate-pumelela-banca.png' %}" alt="ALX Certificate" class="img-fluid">
+            <p>ALX Backend Software Engineering</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'google-cybersecurity-professional-certificate-v2.png' %}" alt="Google Cybersecurity" class="img-fluid">
+            <p>Google Cybersecurity</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'mainPage/images/CS50W.png' %}" alt="CS50" class="img-fluid">
+            <p>CS50's Web Programming with Python and JavaScript</p>
+        </div>
+    </div>
+</div>
 
 
 {% endblock content %}
