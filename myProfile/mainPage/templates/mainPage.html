@@ -34,9 +34,10 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                   <li><a class="dropdown-item" href="{% url 'resume' %}">Resume</a></li>
                   <li><a class="dropdown-item" href="{% url 'projects' %}">Projects</a></li>
-                  <li><a class="dropdown-item" href="#">Api's</a></li>
-                  <li><a class="dropdown-item" href="#">Certificates</a></li>
-                  <li><a class="dropdown-item" href="#">Open Source Contributions</a></li>
+                  {% comment %} <li><a class="dropdown-item" href="{% url 'A' %}">Api's</a></li> {% endcomment %}
+                  <li><a class="dropdown-item" href="{% url 'certificates' %}">Certificates</a></li>
+                  {% comment %} <li><a class="dropdown-item" href="#">Open Source Contributions</a></li> {% endcomment %}
+                  
                 </ul>
               </li>
               <li class="nav-item">
