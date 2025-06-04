@@ -37,11 +37,13 @@ def certificates(request):
     return render(request, 'certificates.html')
 
 
-def download_resume(request, filename='Resume.pdf'):
+def download_resume(request):
     """
     Helps download resume
     """
-    file_path = os.path.join(os.path.dirname(__file__), 'static', 'files', 'Resume.pdf')
+    file_path = os.path.join(os.path.dirname(__file__), 
+                             'static', 'files', 
+                             'mainPage/resumeStuffCertifications/CompleteResume-April2025.pdf')
     if not os.path.exists(file_path):
         raise Http404("Resume not found.")
     
