@@ -41,13 +41,6 @@ def download_resume(request):
     """
     Helps download resume
     """
-    file_path = os.path.join(os.path.dirname(__file__), 
-                             'static', 'files', 
-                             'mainPage/resumeStuffCertifications/CompleteResume-April2025.pdf')
-    if not os.path.exists(file_path):
-        raise Http404("Resume not found.")
-    
-    response = FileResponse(open(file_path, 'rb'), content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="Resume.pdf"'
-    return response
+    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'mainPage/resumeStuffCertifications/CompleteResume-April2025.pdf')
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='PumelelaInstaller.msi')
 
