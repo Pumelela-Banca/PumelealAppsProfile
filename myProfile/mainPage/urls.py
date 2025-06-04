@@ -19,7 +19,8 @@ from mainPage.views import (render_personal_profile, render_home_page,
                             render_bussiness_profile, about_me, render_resume,
                             render_projects, render_single_project,
                             render_services, ServiceDetailView,
-                            ServicesListView, render_404, certificates, download_resume)
+                            ServicesListView, render_404, certificates, download_resume,
+                            contact_page)
 from django.conf.urls import handler404
 
 
@@ -37,4 +38,6 @@ urlpatterns = [
     path('services/<int:pk>', ServiceDetailView.as_view(), name="service"),
     path('certificates/', certificates, name="certificates"),
     path('download_resume/', download_resume, name="download_resume"),
+    path('contact/', contact_page, name="contact"), 
+
 ]
