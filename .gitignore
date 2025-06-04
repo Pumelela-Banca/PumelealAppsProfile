@@ -177,3 +177,9 @@ sephshNew.pub
 
 # project settings
 myProfile/myProfile/settings.py
+
+
+# staticfiles
+myProfile/staticfiles/
+# media files
+myProfile/media/
