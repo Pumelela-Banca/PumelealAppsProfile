@@ -42,7 +42,7 @@ def download_resume(request):
     Helps download resume
     """
     file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/resumeStuffCertifications/CompleteResume-April2025.pdf')
-    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='PumelelaInstaller.msi')
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='CompleteResume-April2025.pdf')
 
 def contact_page(request):
     """
