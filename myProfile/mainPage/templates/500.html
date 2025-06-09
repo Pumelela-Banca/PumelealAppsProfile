@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Error (500)</title>
+    <style>
+        body {
+            background: #f8d7da;
+            color: #721c24;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: inline-block;
+            padding: 40px 60px;
+        }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 0.2em;
+        }
+        p {
+            font-size: 1.3em;
+        }
+        a {
+            color: #721c24;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>500</h1>
+        <h2>Oops! Something went wrong.</h2>
+        <p>We're experiencing an internal server error.<br>
+        Please try again later or <a href="{% url 'home' %}">return to the homepage</a>.</p>
+    </div>
+</body>
+</html>

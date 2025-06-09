@@ -12,7 +12,7 @@ def render_home_page(request):
     Page with the main information.
     """
     services = Services.objects.all()
-    return render(request, 'mainPage.html', {"services": services})
+    return render(request, 'basePersonal.html')
 
 def about_me(request):
     """
@@ -22,7 +22,7 @@ def about_me(request):
     return render(request, 'aboutMe.html')
 
 
-def render_404(request, exception):
+def render_404(request):
     """
     This function will return the 404 page of the website.
     Page with the 404 error.
