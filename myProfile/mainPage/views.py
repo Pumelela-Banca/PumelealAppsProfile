@@ -12,7 +12,7 @@ def render_home_page(request):
     Page with the main information.
     """
     services = Services.objects.all()
-    return render(request, 'basePersonal.html')
+    return render(request, 'PersonalProfileSite.html')
 
 def about_me(request):
     """
@@ -28,6 +28,13 @@ def render_404(request):
     Page with the 404 error.
     """
     return render(request, '404.html', status=404)
+
+def render_500(request):
+    """
+    This function will return the 500 page of the website.
+    Page with the 500 error.
+    """
+    return render(request, '500.html', status=500)
 
 
 def certificates(request):
