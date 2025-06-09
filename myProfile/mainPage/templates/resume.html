@@ -8,133 +8,97 @@
     <link rel="stylesheet" type="text/css" href="{% static 'mainPage/css/styles.css' %}">
 {% endblock css %}
 
-
 {% block content %}
 <h1 class="names">Resume</h1>
 <div class="container">
     <header>
         <h1>Pumelela Banca</h1>
-        <p>Software Engineer (backend)</p>
+        <p>Software Engineer (Backend)</p>
     </header><br>
-    <a href="{% url 'download_resume' %}" class="btn btn-dark">Download PDF</a>
-    
+    <p><strong>Download PDF (Link removed)</strong></p>
+
     <section class="profile">
         <h2>Profile</h2>
         <p>
-          Software Engineer with over 6 years of
-          experience specializing in backend
-          development with a strong focus on
-          Django, Flask, REST APIs, and FastAPI.
-          Proficient in Python, C#, Kotlin and database
-          management using SQL and MongoDB. Passionate about
-          creating efficient and scalable
-          solutions. I have strong
-          problem-solving skills and excel as a
-          collaborative team player. I also experience in
-            developing and deploying web applications,
-          with a keen interest in cloud services and
-            containerization technologies. I have experience 
-            with security best practices and
-          authentication mechanisms.
+            Software Engineer with over 6 years of experience specializing in backend development, with a strong focus on Django, Flask, REST APIs, and FastAPI. Proficient in Python, C#, Kotlin, and database management using SQL and MongoDB. Passionate about creating efficient and scalable solutions. Known for strong problem-solving abilities and excellent collaboration as a team player. Experienced in developing and deploying web applications, with a keen interest in cloud services and containerization technologies. Familiar with security best practices and authentication mechanisms.
         </p>
     </section>
+
     <section class="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Programming Languages: Python, JavaScript, C#, Kotlin and C</li>
-            <li>Frameworks: Flask, Django, Node.js, .Net</li>
+            <li>Programming Languages: Python, JavaScript, C#, Kotlin, and C</li>
+            <li>Frameworks: Flask, Django, Node.js, .NET</li>
             <li>Databases: MySQL, PostgreSQL, MongoDB, Redis</li>
             <li>Cloud Services: DigitalOcean, Azure, AWS</li>
             <li>Tools: Git, Docker, Postman</li>
             <li>Others: RESTful APIs, FastAPI, Authentication, Agile, CSS, HTML</li>
         </ul>
     </section>
+
     <section class="experience">
         <h2>Experience</h2>
+
         <h3>Self-Employed Developer (Freelance)</h3>
-        <a href="{% url 'project' pk=1 %}">
+
         <h4>Quick Launch (Windows and Linux Shortcut App)</h4>
-        </a>
         <ul>
             <li>Developed and launched “Quick Launch,” an intuitive app that simplifies file and folder access for users.</li>
             <li>Utilized Tkinter and Python to create a user-friendly graphical interface (GUI).</li>
             <li>Streamlined daily workflows by providing efficient shortcuts.</li>
         </ul>
-        <a href="{% url 'project' pk=2 %}">
+
         <h4>Lottery API (Real-Time Lottery Numbers in Django and FastAPI)</h4>
-        </a>
         <ul>
-            <li>Conceptualized and developed a real-time lottery API, delivering up-to-date lottery numbers.</li>
-            <li>Implemented the service using
-                Django and FastAPI
-                for robust backend functionality.</li>
-            <li>Leveraged
-                Selenium
-                for automated data collection from various lottery sources.</li>
+            <li>Conceptualized and developed a real-time lottery API that delivers up-to-date lottery numbers.</li>
+            <li>Implemented the service using Django and FastAPI for robust backend functionality.</li>
+            <li>Used Selenium for automated data collection from various lottery sources.</li>
         </ul>
-        <a href="{% url 'project' pk=3 %}">
+
         <h4>Crop Crop (WhatsApp Video Editing Tool)</h4>
-        </a>
         <ul>
             <li>Launched “Crop Crop,” a specialized video editing tool tailored for WhatsApp users.</li>
-            <li>Designed an intuitive interface using
-                Tkinter</li>
-            <li>Leveraged
-                pyMovies
-                for core functionality, allowing users to share movies within WhatsApp's 100MB file size limit.</li>
+            <li>Designed an intuitive interface using Tkinter.</li>
+            <li>Utilized pyMovies for core functionality, enabling users to share movies within WhatsApp's 100MB limit.</li>
         </ul>
-        <a href="{% url 'project' pk=4 %}">
+
         <h4>Lotto Buster (Educational Website)</h4>
-        </a>
         <ul>
-            <li>Engineered the “Lotto Buster” website—an educational platform highlighting the slim chances ofwinning the lottery.</li>
-            <li>Developed the backend using
-                Flask
-                , ensuring seamless data management.</li>
-            <li>Employed
-                Selenium
-                for automated data collection from diverse lottery sources.</li>
-            <li>Designed the frontend with
-                HTML
-                and
-                CSS
-                for a user-friendly experience.</li>
-            <li> Utilized
-                Bootstrap
-                for responsive design.</li>
-            <li>Utilized
-                SQL databases
-                for efficient data storage and retrieval.</li>
+            <li>Built “Lotto Buster,” an educational platform that highlights the slim chances of winning the lottery.</li>
+            <li>Developed the backend using Flask, ensuring seamless data management.</li>
+            <li>Used Selenium for automated data collection from diverse lottery sources.</li>
+            <li>Designed the frontend with HTML and CSS for a user-friendly experience.</li>
+            <li>Implemented responsive design using Bootstrap.</li>
+            <li>Utilized SQL databases for efficient data storage and retrieval.</li>
         </ul>
-        <a href="{% url 'project' pk=5 %}">
+
         <h4>ALXprirence (Collaborative Platform for ALX Students)</h4>
-        </a>
         <ul>
-            <li>Founded ALXprirence, a collaborative platform where ALX students can showcase and collaborate on projects.</li>
+            <li>Founded ALXprirence, a collaborative platform for ALX students to showcase and collaborate on projects.</li>
             <li>
-                Spearheaded the development of a comprehensive user system:
+                Developed a comprehensive user system, including:
                 <ul>
-                    <li>Login
-                        and
-                        registration
-                        functionality.</li>
-                    <li>Profile management
-                        features.</li>
-                    <li>Skills showcase
-                        for students.</li>
-                    <li>Ensured account security with email verification and password recovery.</li>
+                    <li>Login and registration functionality</li>
+                    <li>Profile management features</li>
+                    <li>Skill showcase tools</li>
+                    <li>Email verification and password recovery for account security</li>
                 </ul>
             </li>
-            <li>Streamlined daily workflows by providing efficient shortcuts.</li>
+            <li>Enhanced user workflows with productivity-focused features.</li>
         </ul>
     </section>
+
     <section class="education">
         <h2>Education</h2>
-        <h3>Holberton - ALX Africa (2023-2024)</h3>
-        <p>I completed the Back-End Web Development Course at ALX Africa in 2024. This comprehensive 12-Momth program transformed me into a specialized back-end developer. Throughout the course, I gained proficiency in Python and JavaScript, and hands-on experience with frameworks and tools such as Django, Flask, and Node.js. I mastered database management with both SQL (e.g., MySQL) and NoSQL (e.g., MongoDB) databases, and developed the ability to build and deploy functional web applications from scratch. Additionally, I acquired a solid understanding of RESTful APIs and authentication mechanisms. The course also enhanced my communication, leadership, and problem-solving skills through ALX Foundations training. For my capstone project, I developed a fully-functional back-end web application, demonstrating my ability to create robust server-side solutions.</p>
-        <h2>Matric (2011)</h2>
-        <p>During my matriculation in 2011, I excelled in subjects that are foundational to computer science. I achieved an impressive 86% in Physics, demonstrating strong analytical and problem-solving skills. My 79% in Mathematics reflects my proficiency in logical reasoning and quantitative analysis, both crucial for software development. Additionally, my 79% in Life Sciences showcases my ability to understand complex systems and processes.</p>
+        <h3>Holberton - ALX Africa (2023–2024)</h3>
+        <p>
+            I completed the Back-End Web Development course at ALX Africa in 2024. This comprehensive 12-month program transformed me into a specialized backend developer. I gained proficiency in Python and JavaScript, and hands-on experience with Django, Flask, and Node.js. I mastered database management using MySQL and MongoDB, and developed the ability to build and deploy full-stack web applications. I also gained a strong understanding of RESTful APIs and authentication systems. Additionally, ALX Foundations training enhanced my communication, leadership, and problem-solving skills. For my capstone project, I developed a fully functional backend application showcasing robust server-side development.
+        </p>
+
+        <h3>Matric (2011)</h3>
+        <p>
+            In my matriculation year (2011), I excelled in subjects foundational to software engineering. I achieved 86% in Physics, 79% in Mathematics, and 79% in Life Sciences — reflecting strong analytical, logical, and systems-thinking skills essential for technical problem-solving.
+        </p>
     </section>
 </div>
 {% endblock %}
- 
