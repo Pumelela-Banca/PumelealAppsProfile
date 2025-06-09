@@ -52,6 +52,15 @@ def download_resume(request):
     file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/resumeStuffCertifications/CompleteResume-April2025.pdf')
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='CompleteResume-April2025.pdf')
 
+
+def download_ShortCutApp(request):
+    """
+    Helps download the ShortCut App
+    """
+    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/ShortCutApp.msi')
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutApp.msi')
+
+
 def contact_page(request):
     """
     Renders contact page
@@ -63,7 +72,7 @@ def render_personal_profile(request):
     """
     Renders personal profile page
     """
-    return render(request, 'personalProfile.html')
+    return render(request, 'personalProfileSite.html')
 
 def customerContact(request):
     """
@@ -82,3 +91,11 @@ def customerContact(request):
         return redirect('home')  # Redirect to home page after successful submission
 
     return render(request, 'contact.html')
+
+
+def render_apps_downloads_page(request):
+    """
+    Renders the apps downloads page.
+    This page will contain links to download my apps.
+    """
+    return render(request, 'appsDownloads.html')

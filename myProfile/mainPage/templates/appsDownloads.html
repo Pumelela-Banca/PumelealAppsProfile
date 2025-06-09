@@ -1,0 +1,20 @@
+{% extends "basePersonal.html" %}
+{% load static %}
+{% block title %}Apps and Downloads{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Apps and Downloads</h1>
+    <p>Here you can find various applications and downloads related to our services.</p>
+    
+    <ul>
+        <li><a href="{% static 'downloads/app1.zip' %}">Download App 1</a></li>
+        <li><a href="{% static 'downloads/app2.zip' %}">Download App 2</a></li>
+        <li><a href="{% static 'downloads/app3.zip' %}">Download App 3</a></li>
+    </ul>
+
+    <p>If you have any questions or need assistance, please contact our <a href="{% {% url 'contact' %} %}" >support team.</a> </p>
+</div>
+
+{% endblock content %}
