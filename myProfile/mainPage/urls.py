@@ -27,7 +27,7 @@ from django.conf.urls import handler404, handler500
 handler404 = render_404
 handler500 = render_500
 urlpatterns = [
-    path("", render_home_page, name="home"),
+    path("/", render_home_page, name="home"),
     path("personalProfile/", render_personal_profile, name="personalProfile"),
     path("aboutMe/", about_me, name="aboutMe"),
     path("resume/", render_resume, name="resume"),
