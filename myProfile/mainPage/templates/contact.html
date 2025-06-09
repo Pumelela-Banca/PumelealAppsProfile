@@ -4,10 +4,11 @@
 {% block title %}
     <title>Contacts</title>
 {% endblock title %}
-
+{% block content %}
 <div class="container">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="{% url 'customer_contact' %}" method="POST">
+        {% csrf_token %}
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -27,5 +28,4 @@
         <p>GitHub: <a href="https://github.com/Pumelela-Banca" target="_blank">My GitHub</a></p>
     </div>
 </div>
-
-{% block content %}
+{% endblock %}

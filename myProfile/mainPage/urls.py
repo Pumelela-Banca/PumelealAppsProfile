@@ -20,7 +20,7 @@ from mainPage.views import (render_personal_profile, render_home_page,
                             render_projects, render_single_project,
                             render_services, ServiceDetailView,
                             ServicesListView, render_404, certificates, download_resume,
-                            contact_page, render_500)
+                            contact_page, render_500, customerContact)
 from django.conf.urls import handler404, handler500
 
 
@@ -29,7 +29,6 @@ handler500 = render_500
 urlpatterns = [
     path("", render_home_page, name="home"),
     path("personalProfile/", render_personal_profile, name="personalProfile"),
-    path("bussinessProfile/", render_bussiness_profile, name="bussinessProfile"),
     path("aboutMe/", about_me, name="aboutMe"),
     path("resume/", render_resume, name="resume"),
     path('projects/', render_projects, name='projects'),
@@ -40,5 +39,6 @@ urlpatterns = [
     path('certificates/', certificates, name="certificates"),
     path('download_resume/', download_resume, name="download_resume"),
     path('contact/', contact_page, name="contact"), 
+    path("customerContact/", customerContact, name="customerContact"),
 
 ]

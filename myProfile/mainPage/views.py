@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from .models import Projects, Services
 import os
 from django.http import HttpResponse, Http404, FileResponse
@@ -63,3 +64,21 @@ def render_personal_profile(request):
     Renders personal profile page
     """
     return render(request, 'personalProfile.html')
+
+def customerContact(request):
+    """
+    Accepts and processes cuustomer submitted form.
+    This form is used to contact me for business purposes and required services.
+    """
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        
+        # I will add logic here to handle the form submission
+        # I will add models to save the contact information
+
+        messages.success(request, 'Your message has been sent successfully!')
+        return redirect('home')  # Redirect to home page after successful submission
+
+    return render(request, 'contact.html')
