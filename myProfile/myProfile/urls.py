@@ -20,6 +20,6 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', include('mainPage.urls')),
+    path('', include('mainPage.urls')),
     path('api/', include('lotto_api.urls')),
 ]
