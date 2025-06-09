@@ -13,7 +13,7 @@ def render_home_page(request):
     Page with the main information.
     """
     services = Services.objects.all()
-    return render(request, 'PersonalProfileSite.html')
+    return render(request, 'personalProfileSite.html')
 
 def about_me(request):
     """
