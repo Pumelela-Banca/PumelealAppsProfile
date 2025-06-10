@@ -7,13 +7,20 @@
 <div class="container">
     <h1>Apps and Downloads</h1>
     <p>Here you can find various applications and downloads related to our services.</p>
-    
+    <div class="card mb-3">
+        <img src="" class="card-img-top" alt="ShortCutMaker">
+        <div class="card-body">
+            <h5 class="card-title">ShortCutMaker</h5>
+            <p class="card-text">
+                The ShortCutMaker app is designed to help users quickly create shortcuts for files and folders on their Windows or Linux systems. It provides a user-friendly interface for managing shortcuts, making it easier to access frequently used files, directories and Links to websites.
+            </p>
+        </div>
+    </div>
     <ul>
         <li><a href="{% static 'mainPage/ShortCutApp/ShortCutApp.msi' %}">Download App 1</a></li>
         
     </ul>
 
-    <p>If you have any questions or need assistance, please contact our <a href="{% {% url 'contact' %} %}" >support team.</a> </p>
+    <p>If you have any questions or need assistance, please contact our <a href="{% url 'contact' %}" >support team.</a> </p>
 </div>
-
 {% endblock content %}

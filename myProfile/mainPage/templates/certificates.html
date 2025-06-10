@@ -4,6 +4,17 @@
     <title>Certifications</title>
 {% endblock title %}
 {% block content %}
+<style>
+    .service img {
+        transition: transform 0.3s ease-in-out; /* Smooth animation */
+        cursor: pointer; /* Makes it clear the image is clickable */
+    }
+
+    .service img:hover {
+        transform: scale(1.1); /* Enlarges the image slightly */
+    }
+</style>
+
 <div class="container text-center">
     <h2>My Certifications</h2>
     <div class="row">
