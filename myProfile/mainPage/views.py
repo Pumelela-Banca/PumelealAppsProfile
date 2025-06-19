@@ -61,6 +61,15 @@ def download_ShortCutApp(request):
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
 
 
+def download_ShortCutApp2(request):
+    """
+    Helps download the ShortCut App version 2
+    This is a different version of the ShortCut App.
+    """
+    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/app2/ShortCutMaker.msi')
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
+
+
 def contact_page(request):
     """
     Renders contact page
@@ -99,3 +108,26 @@ def render_apps_downloads_page(request):
     This page will contain links to download my apps.
     """
     return render(request, 'appsDownloads.html')
+
+
+def download_app(request, app_name):
+    """
+    Handles the download of a specific app.
+    """
+    app_file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/static/mainPage/apps/', f'{app_name}.apk')
+    
+    if not os.path.exists(app_file_path):
+        raise Http404("App not found")
+    
+    return FileResponse(open(app_file_path, 'rb'), as_attachment=True, filename=f'{app_name}.msi')
+
+
+def render_projects_page(request):
+    """
+    Renders the projects page.
+    This page will display all the projects I have worked on.
+    """
+    pass
+    #projects = Projects.objects.all()
+    #return render(request, 'projects.html', {'projects': projects})
+
