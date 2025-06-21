@@ -23,14 +23,14 @@ def about_me(request):
     return render(request, 'aboutMe.html')
 
 
-def render_404(request):
+def render_404(request, exeption):
     """
     This function will return the 404 page of the website.
     Page with the 404 error.
     """
     return render(request, '404.html', status=404)
 
-def render_500(request):
+def render_500(request, exeption):
     """
     This function will return the 500 page of the website.
     Page with the 500 error.
@@ -59,7 +59,6 @@ def download_ShortCutApp(request):
     """
     file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/ShortCutMaker.msi')
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
-
 
 def contact_page(request):
     """
