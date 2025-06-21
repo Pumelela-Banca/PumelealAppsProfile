@@ -30,7 +30,7 @@ def render_404(request, exeption):
     """
     return render(request, '404.html', status=404)
 
-def render_500(request, exeption):
+def render_500(request):
     """
     This function will return the 500 page of the website.
     Page with the 500 error.
