@@ -53,12 +53,20 @@ def download_resume(request):
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='CompleteResume-April2025.pdf')
 
 
-def download_ShortCutApp(request):
+def download_shortcut_app(request, version):
     """
-    Helps download the ShortCut App
+    Serve the ShortCut App MSI installer based on version.
     """
-    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/app2/ShortCutMaker.msi')
+    file_path = os.path.join(
+        '/home/sephush/PumelealAppsProfile/myProfile/statc/mainPage/ShortCutApp/',
+        'ShortCutMaker.msi'  # You can change this to use version if needed
+    )
+
+    if not os.path.exists(file_path):
+        raise Http404("The requested installer was not found.")
+
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
+
 
 def contact_page(request):
     """
