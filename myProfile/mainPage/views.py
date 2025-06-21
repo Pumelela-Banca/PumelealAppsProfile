@@ -53,7 +53,7 @@ def download_resume(request):
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='CompleteResume-April2025.pdf')
 
 
-def download_shortcut_app(request, version):
+def download_shortcut_app(request):
     """
     Serve the ShortCut App MSI installer based on version.
     """
@@ -61,7 +61,7 @@ def download_shortcut_app(request, version):
         '/home/sephush/PumelealAppsProfile/myProfile/static/mainPage/ShortCutApp/',
         'ShortCutMaker.msi'  # You can change this to use version if needed
     )
-
+    # Add version handling if necessary
    
 
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
