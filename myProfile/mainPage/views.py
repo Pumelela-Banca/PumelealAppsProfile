@@ -57,7 +57,7 @@ def download_ShortCutApp(request):
     """
     Helps download the ShortCut App
     """
-    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/ShortCutMaker.msi')
+    file_path = os.path.join('/home/sephush/PumelealAppsProfile/myProfile/', 'static/mainPage/ShortCutApp/app2/ShortCutMaker.msi')
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='ShortCutMaker.msi')
 
 def contact_page(request):
