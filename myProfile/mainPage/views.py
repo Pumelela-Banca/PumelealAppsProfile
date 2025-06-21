@@ -58,7 +58,7 @@ def download_shortcut_app(request, version):
     Serve the ShortCut App MSI installer based on version.
     """
     file_path = os.path.join(
-        '/home/sephush/PumelealAppsProfile/myProfile/statc/mainPage/ShortCutApp/',
+        '/home/sephush/PumelealAppsProfile/myProfile/staticfiles/mainPage/ShortCutApp/',
         'ShortCutMaker.msi'  # You can change this to use version if needed
     )
 
