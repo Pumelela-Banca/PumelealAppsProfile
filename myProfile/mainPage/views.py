@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
-from .models import Projects, Services
+from .models import Projects, Services, ContactUs
 import os
 from django.http import HttpResponse, Http404, FileResponse
 from .views_all import *
@@ -89,10 +89,13 @@ def customerContact(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
+        user_message = ContactUs(
+            name=name,
+            email=email,
+            message=message
+        )
+        user_message.save()
         
-        # I will add logic here to handle the form submission
-        # I will add models to save the contact information
-
         messages.success(request, 'Your message has been sent successfully!')
         return redirect('home')  # Redirect to home page after successful submission
 

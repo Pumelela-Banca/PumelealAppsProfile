@@ -51,7 +51,9 @@ class ContactUs(models.Model):
     Model for contact us form.
     """
     name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(
+        
+    )
     message = models.TextField()
 
     def __str__(self):
