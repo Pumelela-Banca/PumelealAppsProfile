@@ -131,3 +131,14 @@ def render_projects_page(request):
     #projects = Projects.objects.all()
     #return render(request, 'projects.html', {'projects': projects})
 
+
+# Games 
+
+
+def render_catch_items_game(request):
+    """
+    Renders the catch items game page.
+    """
+    return render(request, 'games/catchItems.html')
+
+

@@ -21,7 +21,7 @@ from mainPage.views import (render_personal_profile, render_home_page,
                             render_services, ServiceDetailView,
                             ServicesListView, render_404, certificates, download_resume,
                             contact_page, render_500, customerContact, render_apps_downloads_page,
-                            download_shortcut_app)
+                            download_shortcut_app, render_catch_items_game)
 from django.conf.urls import handler404, handler500
 
 
@@ -42,6 +42,5 @@ urlpatterns = [
     path("Download/", render_apps_downloads_page, name="apps_page"),
     # Versioned URLs for projects
     path("Download/ShortCutApp/1.1", download_shortcut_app, name="download_ShortCutApp"),
-    
-
+    path("Games/catchBusket", render_catch_items_game, name="catch_items_game"),
 ]
