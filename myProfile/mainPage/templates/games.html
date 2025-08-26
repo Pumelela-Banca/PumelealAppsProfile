@@ -1,0 +1,13 @@
+{% extends "basePersonal.html" %}
+
+{% block title %}
+    Games
+{% endblock title %}
+
+{% block content %}
+    <h1>Games</h1>
+    <p>Welcome to the games page!</p>
+    <ul>
+        <li><a href="{% url 'catch_items_game' %}">Catch Items Game</a></li>
+    </ul>
+{% endblock content %}

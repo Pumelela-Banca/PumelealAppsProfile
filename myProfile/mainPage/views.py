@@ -134,6 +134,12 @@ def render_projects_page(request):
 
 # Games 
 
+def render_games(request):
+    """
+    Reenders games page
+    """
+    return render(request, 'games.html')
+
 
 def render_catch_items_game(request):
     """
